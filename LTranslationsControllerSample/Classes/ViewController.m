@@ -18,30 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    NSString *lang = [[LTranslationsController sharedTranslationsController] language];
     
-    if ([lang isEqualToString:@"en"])
-        _segmentedControl.selectedSegmentIndex = 0;
-    else if ([lang isEqualToString:@"de"])
-        _segmentedControl.selectedSegmentIndex = 1;
-    else
-        _segmentedControl.selectedSegmentIndex = 2;
-
     [self bindLabel];
-}
-
-
-- (IBAction)segmentChanged:(id)sender
-{
-    NSString *lang = @"en";
-    
-    if (_segmentedControl.selectedSegmentIndex == 1)
-        lang = @"de";
-    else if (_segmentedControl.selectedSegmentIndex == 2)
-        lang = @"fr";
-    
-    [[LTranslationsController sharedTranslationsController] setLanguage:lang];
 }
 
 

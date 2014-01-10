@@ -1,25 +1,34 @@
+//
+//  Created by Luka Gabrić.
+//  Copyright (c) 2013 Luka Gabrić. All rights reserved.
+//
+
+
 #import <Foundation/Foundation.h>
 
 
 #define Translate(KEY) [[LTranslationsController sharedTranslationsController] translate:KEY]
-#define kDidLoadTranslationsDict @"kDidLoadTranslationsDict"
+#define kDidLoadTranslationsDict @ "kDidLoadTranslationsDict"
 
 
 @interface LTranslationsController : NSObject
 {
-    NSDictionary *_translationsDict;
-    NSArray *_supportedLanguages;
-    NSString *_url;
+	NSDictionary *_translationsDict;
+	NSArray *_supportedLanguages;
+    NSString *_language;
+    BOOL _useRemoteTranslations;
+    NSString *_remoteTranslationsUrl;
 }
 
 
-@property (strong, nonatomic) NSString *language;
+@property (readonly, nonatomic) NSString *language;
 
 
 + (LTranslationsController *)sharedTranslationsController;
 
 
-- (void)loadTranslationsWithUrl:(NSString *)url andSupportedLanguages:(NSArray *)supportedLanguages;
+- (void)initializeWithSupportedLanguages:(NSArray *)supportedLanguages;
+- (void)initializeRemoteTranslationsWithUrl:(NSString *)url andSupportedLanguages:(NSArray *)supportedLanguages;
 - (NSString *)translate:(NSString *)key;
 
 

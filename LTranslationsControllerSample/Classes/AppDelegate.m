@@ -7,7 +7,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[LTranslationsController sharedTranslationsController] loadTranslationsWithUrl:@"http://lukagabric.com/wp-content/uploads/other/translationssample/" andSupportedLanguages:@[@"en", @"de", @"fr"]];
+    [[LTranslationsController sharedTranslationsController] initializeRemoteTranslationsWithUrl:@"http://lukagabric.com/wp-content/uploads/other/translationssample/" andSupportedLanguages:@[@"en", @"de", @"fr"]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [ViewController new];
