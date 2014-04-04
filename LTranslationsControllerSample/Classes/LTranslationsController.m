@@ -211,6 +211,12 @@
 }
 
 
++ (NSString *)getCurrentLanguage
+{
+    return [[LTranslationsController sharedTranslationsController] language];
+}
+
+
 #pragma mark -
 
 

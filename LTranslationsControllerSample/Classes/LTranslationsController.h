@@ -8,6 +8,7 @@
 
 
 #define Translate(KEY) [[LTranslationsController sharedTranslationsController] translate:KEY]
+#define getCurrentLanguage() [LTranslationsController getCurrentLanguage]
 #define kDidLoadTranslationsDict @ "kDidLoadTranslationsDict"
 
 
@@ -25,7 +26,7 @@
 
 
 + (LTranslationsController *)sharedTranslationsController;
-
++ (NSString *)getCurrentLanguage;
 
 - (void)initializeWithSupportedLanguages:(NSArray *)supportedLanguages;
 - (void)initializeRemoteTranslationsWithUrl:(NSString *)url andSupportedLanguages:(NSArray *)supportedLanguages;
