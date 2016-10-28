@@ -1,10 +1,11 @@
-Pod::Spec.new do |s|
-  s.name         = "LTranslationsController"
-  s.version      = "1.0"
-  s.platform     = :ios, '6.0'
-  s.author       = 'Luka Gabric'
-  s.source       = { :git => 'git://github.com/lukagabric/LTranslationsController.git' }
-  s.source_files = 'LTranslationsControllerSample/Classes/LTranslationsController.h, LTranslationsControllerSample/Classes/LTranslationsController.m'
-  s.dependency 'ASIHTTPRequest'
-  s.requires_arc = true
+Pod::Spec.new do |spec|
+  spec.name         = 'LTranslationsController'
+  spec.version      = '1.0'
+  spec.license      = 'MIT'
+  spec.summary      = 'iOS Timer'
+  spec.homepage     = 'https://github.com/lukagabric/LTimer'
+  spec.author       = 'Luka Gabric'
+  spec.source       = { :git => 'git://github.com/lukagabric/LTranslationsController' }
+  spec.source_files = 'LTranslationsControllerSample/Classes/LTranslationsController.h, LTranslationsControllerSample/Classes/LTranslationsController.m'
+  spec.requires_arc = true
 end
