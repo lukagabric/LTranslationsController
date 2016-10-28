@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '6.0'
   s.author       = 'Luka Gabric'
   s.source       = { :git => 'git://github.com/lukagabric/LTranslationsController.git' }
-  s.source_files = 'LTranslationsControllerSample/Classes/LTranslationsController.{h,m}'
+  s.source_files = 'LTranslationsControllerSample/Classes/LTranslationsController.h, LTranslationsControllerSample/Classes/LTranslationsController.m'
   s.dependency 'ASIHTTPRequest'
   s.requires_arc = true
 end
