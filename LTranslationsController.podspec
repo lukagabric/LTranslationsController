@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name         = 'LTranslationsController'
   spec.version      = '1.0'
   spec.license      = 'MIT'
-  spec.summary      = 'iOS Timer'
+  spec.summary      = 'Translations Controller'
   spec.homepage     = 'https://github.com/lukagabric/LTranslationsController'
   spec.author       = 'Luka Gabric'
   spec.source       = { :git => 'git://github.com/lukagabric/LTranslationsController' }
